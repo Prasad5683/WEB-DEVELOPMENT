@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter Image Showcase</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(to bottom right, #0a0f1d, #1a1a2e);
+    color: #f5e6ca;
+    font-family: 'Georgia', serif;
+    padding: 40px 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFF;
+    text-shadow: 0 0 12px #d4af37, 0 0 25px #e9b824;
+    
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    animation: fadeIn 2s ease;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(6px);
+  }
+
+  .card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(233, 184, 36, 0.4);
+  }
+
+  .card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #ffd369;
+    text-shadow: 0 0 8px rgba(255, 211, 105, 0.4);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #ffd369;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #e0c97f;
+  }
+
+  footer {
+    margin-top: 60px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ffd369;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glowTitle {
+    from {
+      text-shadow: 0 0 10px #e9b824, 0 0 25px #d4af37;
+    }
+    to {
+      text-shadow: 0 0 25px #fce38a, 0 0 40px #f6c90e;
+    }
+  }
+
+  @keyframes glowText {
+    from {
+      text-shadow: 0 0 8px #ffd369;
+    }
+    to {
+      text-shadow: 0 0 16px #ffeaa7;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+<h1>ASSIGNMENT NO.5</h1>
+</br>
+<hr>
+</br>
+
+  <h2>🧙‍♂️ Harry Potter Image Showcase</h2>
+</br>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Image</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD6i7t_qhuYivM2GrcewyZjYTePbVDNXX0wygJhvW4JyH8gHI4GZM0pT6LPn_qC-pcDIc&usqp=CAU "alt="Harry Potter">
+      <figcaption>Harry Potter - The Chosen One</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Fixed Size</h2>
+      <img src="image/h2.jpg " alt="Hermione" width="250" height="375">
+      <figcaption>Hermione Granger - Brightest Witch</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Responsive Image</h2>
+      <img src="image/h3.jpg " alt="Ron Weasley" style="width: 100%; height: auto;">
+      <figcaption>Ron Weasley - Loyal Friend</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Figure with Caption</h2>
+      <figure>
+        <img src="image/h4.jpg " alt="Dumbledore">
+        <figcaption>Albus Dumbledore - Headmaster of Hogwarts</figcaption>
+      </figure>
+    </div>
+
+    <div class="card">
+      <h2>Alt Text Example</h2>
+      <img src="image/h5.jpg "  alt="This image could not load">
+      <figcaption>Shows alt text if image fails</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Image with Long Description</h2>
+      <img src="image/h6.jpg "
+           alt="Hermione Granger"
+           longdesc="#hermione-desc"
+           title="Click to read long description" />
+      <figcaption><a href="#hermione-desc">Hermione Granger – Long Description Below</a></figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Clickable Image Link</h2>
+      <a href="https://en.wikipedia.org/wiki/Harry_Potter_(character)" target="_blank">
+        <img src="image/h7.jpg " 
+             alt="Harry Potter poster"
+             title="Click to read about Harry Potter" />
+      </a>
+      <figcaption>Harry Potter – Opens Wikipedia</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Lazy Loading</h2>
+      <img src="image/h8.jpg "
+           alt="Dumbledore"
+           loading="lazy"
+           title="Albus Dumbledore with lazy loading" />
+      <figcaption>Image loads only when scrolled into view</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Image Map (Clickable Parts)</h2>
+      <img src="image/h1.jpg "usemap="#map" alt="Hogwarts Map" />
+      <figcaption>Click Hogwarts Sections</figcaption>
+
+      <map name="map">
+        <area shape="rect" coords="30,30,150,150" alt="Hogwarts Castle" title="Hogwarts Castle"
+              href="https://static.wikia.nocookie.net/harrypotter/images/e/e1/Hogwarts_Castle_DHF2.jpg/revision/latest?cb=20120128145344" target="_blank" />
+        <area shape="circle" coords="250,100,50" alt="Hogsmeade" title="Hogsmeade Village"
+              href="https://harrypotter.fandom.com/wiki/Hogsmeade" target="_blank" />
+      </map>
+    </div>
+
+    <div class="card">
+      <h2>Hover Info (Title Attribute)</h2>
+      <img src="https://i.insider.com/56fe794add089507398b46a6?width=700"
+           alt="Ron Weasley"
+           title="Ron Weasley - Gryffindor, Loyal, Fearful of spiders" />
+      <figcaption>Hover to see more info</figcaption>
+    </div>
+  </div>
+
+  
+<div id="hermione-desc" style="margin-top: 60px; max-width: 800px; margin-inline: auto;">
+    <h2>📝 Hermione Granger - Long Description</h2>
+    <p>
+      Hermione Granger is one of the brightest witches of her age. Born to Muggle parents, she was sorted into Gryffindor
+      House at Hogwarts School of Witchcraft and Wizardry. Known for her intelligence, bravery, and fierce loyalty,
+      Hermione played a vital role in the defeat of Lord Voldemort. She's also a strong advocate for the rights of
+      house-elves and other magical creatures.
+    </p>
+  </div>
+  <footer>
+    “Words are, in my not-so-humble opinion, our most inexhaustible source of magic.” – Albus Dumbledore
+  </footer>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!-- [Start of HTML file] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Assignments</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #d0e7ff, #a8c9f6);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: #4d9ff6;
+      text-shadow: 1px 1px #fff;
+    }
+
+    nav a {
+      margin-left: 1.2rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #72b9f9;
+      color: white;
+      box-shadow: 0 0 10px #4d9ff6;
+    }
+
+    .banner {
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(to right, #a8c9f6, #d0e7ff);
+      padding: 3rem 2rem;
+      text-align: center;
+      color: #2b2e4a;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #fff;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .card {
+      width: 250px;
+      height: 200px;
+      padding: 1rem;
+      border-radius: 25px;
+      color: #00204a;
+      font-size: 1rem;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: popUp 0.5s ease-in-out;
+      cursor: pointer;
+      background: linear-gradient(135deg, #a8c9f6, #72b9f9);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2, .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-buttons {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .card-buttons button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 12px;
+      background: #fff;
+      color: #333;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card-buttons button:hover {
+      background: #72b9f9;
+      color: white;
+      box-shadow: 0 0 10px #4d9ff6;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0.5rem;
+      }
+    }
+
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-section {
+      background: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: #333;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      margin-top: 3rem;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-section .project-details {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .about-section .links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .about-section .links a {
+      text-decoration: none;
+      color: #4d9ff6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      background: #f0f0f0;
+      transition: background 0.3s ease;
+    }
+
+    .about-section .links a:hover {
+      background: #72b9f9;
+      color: white;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">WebDev</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#a">Assignments</a>
+      <a href="#abt" >About</a>
+      <a href="https://github.com/Prasad5683?tab=repositories"  target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/prasad-pise-285296308/"  target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>🎯 Web Development Assignments!</h1>
+  </section>
+
+  <!-- Assignments Section -->
+  <section class="cards" id="a">
+
+    <!-- Assignment 1 -->
+    <div class="card">
+      <h2>Assignment No.1</h2>
+      <p>Study of Web Technology basics along with different web technology languages</p>
+      <div class="card-buttons">
+        <a href="html/assignment1.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment1.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 2 -->
+    <div class="card">
+      <h2>Assignment No.2</h2>
+      <p>Create static web pages by using HTML tags</p>
+      <div class="card-buttons">
+        <a href="html/assignment2.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment2.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 3 -->
+    <div class="card">
+      <h2>Assignment No.3</h2>
+      <p>Create a web page which defines all text formatting tags</p>
+      <div class="card-buttons">
+        <a href="html/assignment3.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment3.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 4 -->
+    <div class="card">
+      <h2>Assignment No.4</h2>
+      <p>Create a webpage using list tags of HTML</p>
+      <div class="card-buttons">
+        <a href="html/assignment4.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment4.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 5 (1) -->
+    <div class="card">
+      <h2>Assignment No.5 (1)</h2>
+      <p>Create webpage to include image using HTML tag. (Different Image Tags)</p>
+      <div class="card-buttons">
+        <a href="html/assignment5.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment5.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 5 (2) -->
+    <div class="card">
+      <h2>Assignment No.5 (2)</h2>
+      <p>Images in Different Layouts</p>
+      <div class="card-buttons">
+        <a href="html/assignment5.2.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment5.2.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 6 -->
+    <div class="card">
+      <h2>Assignment No.6</h2>
+      <p>Create webpage to include frames using HTML tag (Rows & Columns)</p>
+      <div class="card-buttons">
+        <a href="html/assignment6.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment6.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 7 -->
+    <div class="card">
+      <h2>Assignment No.7</h2>
+      <p>Demonstrate the use of link tags in HTML</p>
+      <div class="card-buttons">
+        <a href="html/assignment7.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment7.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 8 -->
+    <div class="card">
+      <h2>Assignment No.8</h2>
+      <p>Demonstrate the use of table tags in HTML</p>
+      <div class="card-buttons">
+        <a href="html/assignment8.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment8.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 9 -->
+    <div class="card">
+      <h2>Assignment No.9</h2>
+      <p>Create employee registration webpage using HTML form objects.</p>
+      <div class="card-buttons">
+        <a href="html/assignment9.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment9.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 10 -->
+    <div class="card">
+      <h2>Assignment No.10</h2>
+      <p>Create resume as a webpage using HTML tags.</p>
+      <div class="card-buttons">
+        <a href="html/assignment10.html" target="_blank"><button>View HTML</button></a>
+        <a href="css/assignment10.html" target="_blank"><button>View CSS</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 11 - XML -->
+    <div class="card">
+      <h2>Assignment No.11</h2>
+      <p>Books XML File</p>
+      <div class="card-buttons">
+        <a href="xml/assignment 11/Books.xml" target="_blank"><button>View XML</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 12 - XML -->
+    <div class="card">
+      <h2>Assignment No.12</h2>
+      <p>CD Catalog HTML Output</p>
+      <div class="card-buttons">
+        <a href="xml/assignment 12/cdcatlog_output.htm" target="_blank"><button>View XML</button></a>
+      </div>
+    </div>
+
+    <!-- Assignment 13 - XML -->
+    <div class="card">
+      <h2>Assignment No.13</h2>
+      <p>Students XML HTML Output</p>
+      <div class="card-buttons">
+        <a href="xml/assignment 13/students_output.htm" target="_blank"><button>View XML</button></a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="abt">
+    <h2>About</h2>
+    <p>Web Development Assignments using HTML, CSS, XML</p>
+    <div class="project-details">
+      <p><strong>Course Coordinator:</strong> S.S.Kore</p>
+      <p><strong>Student Name:</strong> Prasad Pise</p>
+      <p><strong>Roll No:</strong> 19</p>
+      <p><strong>Class & Division:</strong> 2nd Year, B Division</p>
+      <p><strong>Batch:</strong> S1 Batch</p>
+    </div>
+    <div class="links">
+      <a href="https://github.com/Prasad5683?tab=repositories" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/prasad-pise-285296308/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+</body>
+</html>

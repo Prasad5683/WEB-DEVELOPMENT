@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Registration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f1f6f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #407088;
+      margin-bottom: 30px;
+    }
+
+    .form-container {
+      background: #fff;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .gender-group, .skills-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #407088;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #30586b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧑‍💼 Employee Registration Form</h1>
+
+  <div class="form-container">
+    <form action="#" method="POST" enctype="multipart/form-data">
+      
+      <label for="empId">Employee ID</label>
+      <input type="text" id="empId" name="empId" required>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="dept">Department</label>
+      <select id="dept" name="dept">
+        <option value="">-- Select Department --</option>
+        <option>Human Resources</option>
+        <option>Development</option>
+        <option>Marketing</option>
+        <option>Finance</option>
+        <option>Sales</option>
+      </select>
+
+      <label>Gender</label>
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label>Skills</label>
+      <div class="skills-group">
+        <label><input type="checkbox" name="skills" value="Java"> Java</label>
+        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+        <label><input type="checkbox" name="skills" value="HTML/CSS"> HTML/CSS</label>
+        <label><input type="checkbox" name="skills" value="React"> React</label>
+      </div>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

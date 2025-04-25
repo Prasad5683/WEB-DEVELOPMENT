@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prasad's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+      color: #2c3e50;
+      min-height: 100vh;
+    }
+
+    nav {
+      width: 280px;
+      background:#264e70;
+      color: white;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #ecf0f1;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    nav h1 {
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 5px;
+      color: floralwhite;
+    }
+
+    nav p {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .sidebar-contact {
+      font-size: 0.8rem;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sidebar-contact p {
+      margin: 5px 0;
+      word-break: break-word;
+    }
+
+    .sidebar-contact a {
+      color: #defcf9;
+      text-decoration: none;
+    }
+
+    .sidebar-contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 280px;
+      padding: 40px 30px;
+      width: 100%;
+      background: black;
+      animation: fadeIn 1s ease-in;
+      background-image: url("https://static.vecteezy.com/system/resources/thumbnails/035/158/342/small_2x/loop-background-neon-retro-wave-80s-style-video.jpg");
+background:#f7f7f7;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #407088;
+      display: inline-block;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      color: #144673;
+    }
+
+    .card {
+
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 0.5s ease-in-out;
+    }
+
+.card {
+
+
+    border-radius:10px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    overflow:hidden;
+background: #e1eeff;
+border: 1px solid #acdcee;
+
+}
+
+.card h3, .card p, .card li {
+  color: black;
+}
+
+
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    li::before {
+      content: '➤';
+      color: #407088;
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem;
+      }
+
+      .profile-img {
+        width: 10px;
+        height: 10px;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 20px;
+        background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <img class="profile-img" src="Portfolio.png" alt="Shamali's Photo" />
+    <h1>Prasad Pise</h1>
+    <p>Frontend & Flutter Developer</p>
+
+    <div class="sidebar-contact">
+      <p><i class="fas fa-envelope"></i> 
+        <a href="mailto:piseprasad5683@gmail.com">piseprasad5683@gmail.com</a>
+      </p>
+      <p><i class="fas fa-phone-alt"></i> 
+        <a href="tel:+918010220028">+91 8010220028</a>
+      </p>
+      <p><i class="fab fa-linkedin"></i> 
+        <a href="http://linkedin.com/in/prasad-pise-285296308/" target="_blank">LinkedIn</a>
+      </p>
+      <p><i class="fab fa-github"></i> 
+        <a href="https://github.com/Prasad5683" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </nav>
+
+ 
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>Hello! I'm Prasad, a passionate web and mobile app developer with a keen interest in creating intuitive, efficient, and user-friendly applications. I'm currently pursuing my degree and continuously learning new technologies like Flutter, Java, and modern web tools. I love collaborating, solving problems, and turning ideas into interactive digital products.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2> Education</h2>
+      <div class="card">
+        <h3>B.Tech in CSE - 2nd Year</h3>
+        <p>2023 - 2027 | D.Y. Patil College of Engineering & Technology, Kolhapur.</p>
+        <h4>HSC (12th)</h4>
+        <p>2023 | K.B.P.college Bhalawani</p>
+        <h4>SSC (10th)</h4>
+        <p>2021 | K.B.P.Vidyalay Piliv.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>C Programming</li>
+            <li>OOP Concepts</li>
+            <li>Java</li>
+            <li>Frontend Development (HTML, CSS, JavaScript)</li>
+            <li>Flutter & Dart</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Problem Solving & Debugging</li>
+            <li>Project Management</li>
+            <li>Creative Thinking</li>
+            <li>Content Creation & Technical Writing</li>
+            <li>Presentation & Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <h3>Restaurant Table Booking</h3>
+        <p>A web-based solution for restaurants that allows users to book tables online. Features include live availability updates, smooth UI, and reservation confirmation system. Technologies used: HTML, CSS, JavaScript, Firebase.</p>
+      </div>
+      <div class="card">
+        <h3>Learning Platform for Kids</h3>
+        <p>This interactive web platform is designed for young learners. It includes animated lessons, gamified quizzes, and colorful interfaces to make learning fun. Built using Flutter with Dart and Firebase backend.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>This portfolio site you're currently viewing! Designed to showcase my skills and projects. Built with HTML, CSS, and responsive design practices.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Campus Ambassador – Training and Placement Cell</h3>
+        <p>S.Y. (B Division), D.Y. Patil COET</p>
+        <ul>
+          <li>Represented the T&P cell and coordinated student placement activities</li>
+          <li>Promoted skill-building and internship opportunities among peers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <div class="card">
+        <h3>2nd Rank – Pratham Code Competition</h3>
+        <p><em>September 2024</em></p>
+        <p>Won 2nd place in Digital Ganesha coding competition.</p>
+      </div></section>
+
+
+<section>
+      <h2> Certifications</h2>
+      <div class="card timeline">
+      <ul>
+        <li>Virtual Networking Internship – EduSkills-AICTE</li>
+        <li>App Development – EduSkills-AICTE</li>
+        <li>Python Beginner Level – Cisco</li>
+      </ul>
+    </div>
+
+    </section>
+<section id="languages">
+  <h2>Languages</h2>
+  <div class="card">
+    <ul>
+      <li>English</li>
+       <li>Marathi</li>
+      <li>Hindi</li>
+     
+    </ul>
+  </div>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <div class="card">
+    <ul>
+       <li>Coding</li>
+       <li>Building Websites</li>
+      <li>Swimming</li>
+     </ul>
+  </div>
+</section>
+
+  
+  </main>
+
+</body>
+</html>

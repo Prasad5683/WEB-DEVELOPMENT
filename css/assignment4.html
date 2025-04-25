@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stylish HTML Lists</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Times New Roman;
+      background: #f6f6f6;
+      color: #333;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      animation: slideIn 1s ease-out;
+    }
+
+    #head {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: #00204a;
+      background:  #f4f4ec;
+      letter-spacing: 1px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 20px;
+      border: 2px solid #26466f;
+      font-family: cursive;
+    }
+
+    .card {
+      backdrop-filter: blur(12px);
+      background: #f1fcfd;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      width: 500px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      color: #240041;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #d7ccc8;
+      padding-bottom: 10px;
+      font-family: cursive;
+      
+    }
+
+    ol, ul, dl {
+      padding-left: 20px;
+      font-size: 1.1rem;
+    }
+
+    li, dt, dd {
+      margin-bottom: 10px;
+    }
+
+    dt {
+      font-weight: bold;
+      color: #3e2723;
+    }
+
+    dd {
+      margin-left: 20px;
+      color: #5d4037;
+    }
+
+    .upper-roman { list-style-type: upper-roman; }
+    .lower-alpha { list-style-type: lower-alpha; }
+    .square { list-style-type: square; }
+    .circle { list-style-type: circle; }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #5d4037;
+      font-weight: bold;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+   
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>ASSIGNMENT NO.4</h1>
+</br>
+</br>
+  <h1 id="head">HTML List Tags Showcase</h1>
+
+  <div class="container">
+    <div class="card">
+      <h2>Ordered Lists</h2>
+      <h3>Default</h3></br>
+      <ol>
+        <li>Open the browser</li>
+        <li>Visit website</li>
+        <li>Explore content</li>
+      </ol>
+</br>
+<hr>
+</br>
+      <h3>Upper Roman</h3></br>
+      <ol class="upper-roman">
+        <li>Introduction</li>
+        <li>Details</li>
+        <li>Summary</li>
+      </ol>
+</br>
+<hr>
+</br>
+
+      <h3>Lower Alpha</h3></br>
+      <ol class="lower-alpha">
+        <li>Step A</li>
+        <li>Step B</li>
+        <li>Step C</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Unordered Lists</h2>
+      <h3>Disc</h3></br>
+      <ul>
+        <li>Tea</li>
+        <li>Coffee</li>
+        <li>Milk</li>
+      </ul></br>
+<hr>
+</br>
+      <h3>Square</h3></br>
+      <ul class="square">
+        <li>Pen</li>
+        <li>Pencil</li>
+        <li>Notebook</li>
+      </ul></br>
+<hr>
+</br>
+      <h3>Checklist</h3></br>
+      <ul class="checklist">
+        <li>Submit assignment</li>
+        <li>Clean desk</li>
+        <li>Read notes</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Definition List</h2>
+      <h3>Web Terminologies</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>The standard markup language for creating web pages.</dd>
+
+        <dt>CSS</dt>
+        <dd>A style sheet language used to describe the presentation of a document.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>A programming language used to create interactive effects within web browsers.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

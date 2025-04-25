@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Registration Form</title>
+  
+</head>
+<body>
+
+  <h1>🧑‍💼 Employee Registration Form</h1>
+
+  <div class="form-container">
+    <form action="#" method="POST" enctype="multipart/form-data">
+      
+      <label for="empId">Employee ID</label>
+      <input type="text" id="empId" name="empId" required>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="dept">Department</label>
+      <select id="dept" name="dept">
+        <option value="">-- Select Department --</option>
+        <option>Human Resources</option>
+        <option>Development</option>
+        <option>Marketing</option>
+        <option>Finance</option>
+        <option>Sales</option>
+      </select>
+
+      <label>Gender</label>
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label>Skills</label>
+      <div class="skills-group">
+        <label><input type="checkbox" name="skills" value="Java"> Java</label>
+        <label><input type="checkbox" name="skills" value="Python"> Python</label>
+        <label><input type="checkbox" name="skills" value="HTML/CSS"> HTML/CSS</label>
+        <label><input type="checkbox" name="skills" value="React"> React</label>
+      </div>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

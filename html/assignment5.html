@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter Image Showcase</title>
+
+
+</head>
+<body>
+<h1>ASSIGNMENT NO.5</h1>
+</br>
+<hr>
+</br>
+
+  <h2>🧙‍♂️ Harry Potter Image Showcase</h2>
+</br>
+
+  <div class="container">
+    <div class="card">
+      <h2>Basic Image</h2>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD6i7t_qhuYivM2GrcewyZjYTePbVDNXX0wygJhvW4JyH8gHI4GZM0pT6LPn_qC-pcDIc&usqp=CAU "alt="Harry Potter">
+      <figcaption>Harry Potter - The Chosen One</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Fixed Size</h2>
+      <img src="\web\css\image\h2.jpg " alt="Hermione" width="250" height="375">
+      <figcaption>Hermione Granger - Brightest Witch</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Responsive Image</h2>
+      <img src="\web\css\image\h3.jpg " alt="Ron Weasley" style="width: 100%; height: auto;">
+      <figcaption>Ron Weasley - Loyal Friend</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Figure with Caption</h2>
+      <figure>
+        <img src="\web\css\image\h4.jpg " alt="Dumbledore">
+        <figcaption>Albus Dumbledore - Headmaster of Hogwarts</figcaption>
+      </figure>
+    </div>
+
+    <div class="card">
+      <h2>Alt Text Example</h2>
+      <img src="\web\css\image\h5.jpg "  alt="This image could not load">
+      <figcaption>Shows alt text if image fails</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Image with Long Description</h2>
+      <img src="\web\css\image\h6.jpg "
+           alt="Hermione Granger"
+           longdesc="#hermione-desc"
+           title="Click to read long description" />
+      <figcaption><a href="#hermione-desc">Hermione Granger – Long Description Below</a></figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Clickable Image Link</h2>
+      <a href="https://en.wikipedia.org/wiki/Harry_Potter_(character)" target="_blank">
+        <img src="\web\css\image\h7.jpg " 
+             alt="Harry Potter poster"
+             title="Click to read about Harry Potter" />
+      </a>
+      <figcaption>Harry Potter – Opens Wikipedia</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Lazy Loading</h2>
+      <img src="\web\css\image\h8.jpg "
+           alt="Dumbledore"
+           loading="lazy"
+           title="Albus Dumbledore with lazy loading" />
+      <figcaption>Image loads only when scrolled into view</figcaption>
+    </div>
+
+    <div class="card">
+      <h2>Image Map (Clickable Parts)</h2>
+      <img src="\web\css\image\h1.jpg "usemap="#map" alt="Hogwarts Map" />
+      <figcaption>Click Hogwarts Sections</figcaption>
+
+      <map name="map">
+        <area shape="rect" coords="30,30,150,150" alt="Hogwarts Castle" title="Hogwarts Castle"
+              href="https://static.wikia.nocookie.net/harrypotter/images/e/e1/Hogwarts_Castle_DHF2.jpg/revision/latest?cb=20120128145344" target="_blank" />
+        <area shape="circle" coords="250,100,50" alt="Hogsmeade" title="Hogsmeade Village"
+              href="https://harrypotter.fandom.com/wiki/Hogsmeade" target="_blank" />
+      </map>
+    </div>
+
+    <div class="card">
+      <h2>Hover Info (Title Attribute)</h2>
+      <img src="https://i.insider.com/56fe794add089507398b46a6?width=700"
+           alt="Ron Weasley"
+           title="Ron Weasley - Gryffindor, Loyal, Fearful of spiders" />
+      <figcaption>Hover to see more info</figcaption>
+    </div>
+  </div>
+
+  
+<div id="hermione-desc" style="margin-top: 60px; max-width: 800px; margin-inline: auto;">
+    <h2>📝 Hermione Granger - Long Description</h2>
+    <p>
+      Hermione Granger is one of the brightest witches of her age. Born to Muggle parents, she was sorted into Gryffindor
+      House at Hogwarts School of Witchcraft and Wizardry. Known for her intelligence, bravery, and fierce loyalty,
+      Hermione played a vital role in the defeat of Lord Voldemort. She's also a strong advocate for the rights of
+      house-elves and other magical creatures.
+    </p>
+  </div>
+  <footer>
+    “Words are, in my not-so-humble opinion, our most inexhaustible source of magic.” – Albus Dumbledore
+  </footer>
+</body>
+</html>

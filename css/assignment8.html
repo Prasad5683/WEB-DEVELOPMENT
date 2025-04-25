@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 8 - Timetable</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      color: #132743;
+    }
+
+
+
+    h3 {
+    font-family: berlin sans fb;
+      margin-bottom: 20px;
+      color: darkred;
+      border: 2px solid black;
+      background-color: white;
+      width: 400px;
+      font-size: 38px;
+      text-align: center;
+      margin-left: 430px;
+    }
+
+    hr {
+      border: none;
+      height: 4px;
+      background-color: #407088;
+      width: 80%;
+      margin: 0 auto 30px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #407088;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    tr:hover td {
+      background-color: #fef3e7;
+    }
+
+    b {
+      color: #ff5252;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      table, th, td {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ASSIGNMENT NO.8</h1>
+  <h3>TIME-TABLE</h3>
+  <hr>
+
+  <table>
+    <tr>
+      <th rowspan="2">DAY</th>
+      <th colspan="8">TIME</th>
+    </tr>
+    <tr>
+      <th>9:00 - 10:00</th>
+      <th>10:00 - 11:00</th>
+      <th>11:00 - 11:15</th>
+      <th>11:15 - 12:15</th>
+      <th>12:15 - 1:15</th>
+      <th>1:15 - 2:00</th>
+      <th>2:00 - 3:00</th>
+      <th>3:00 - 4:00</th>
+    </tr>
+    <tr>
+      <th>MON</th>
+      <td>AOOC</td>
+      <td>AOOC</td>
+      <td><b>R</b></td>
+      <td>DSA</td>
+      <td>MDM</td>
+      <td><b>R</b></td>
+      <td>AT</td>
+      <td>ES</td>
+    </tr>
+    <tr>
+      <th>TUE</th>
+      <td>DS</td>
+      <td>DS</td>
+      <td><b>E</b></td>
+      <td>DSA</td>
+      <td>MDM</td>
+      <td><b>E</b></td>
+      <td>AT</td>
+      <td>ES</td>
+    </tr>
+    <tr>
+      <th>WED</th>
+      <td>WD</td>
+      <td>WD</td>
+      <td><b>C</b></td>
+      <td>AOOC</td>
+      <td>MDM</td>
+      <td><b>C</b></td>
+      <td>DEPT.ACT</td>
+      <td>DEPT.ACT</td>
+    </tr>
+    <tr>
+      <th>THU</th>
+      <td>TTL</td>
+      <td>TTL</td>
+      <td><b>E</b></td>
+      <td>AOOC</td>
+      <td>DSA</td>
+      <td><b>E</b></td>
+      <td>AT</td>
+      <td>OEC</td>
+    </tr>
+    <tr>
+      <th>FRI</th>
+      <td>TTL</td>
+      <td>TTL</td>
+      <td><b>S</b></td>
+      <td>TPMS</td>
+      <td>TPMS</td>
+      <td><b>S</b></td>
+      <td>TPMS</td>
+      <td>OEC</td>
+    </tr>
+    <tr>
+      <th>SAT</th>
+      <td colspan="2">CODING CLUB</td>
+      <td><b>S</b></td>
+      <td colspan="2">CODING CLUB</td>
+      <td><b>S</b></td>
+      <td colspan="2">CODING CLUB</td>
+    </tr>
+    <tr>
+      <th>SUN</th>
+      <td colspan="8"><strong>HOLIDAY</strong></td>
+    </tr>
+  </table>
+
+  <footer>
+   
+  </footer>
+</body>
+</html>
